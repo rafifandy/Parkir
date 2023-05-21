@@ -1,0 +1,5 @@
+/home/user/dotnet/test/bin/Debug/net6.0/publish/test
+/home/user/dotnet/test/bin/Debug/net6.0/publish/test.dll
+/home/user/dotnet/test/bin/Debug/net6.0/publish/test.deps.json
+/home/user/dotnet/test/bin/Debug/net6.0/publish/test.runtimeconfig.json
+/home/user/dotnet/test/bin/Debug/net6.0/publish/test.pdb
