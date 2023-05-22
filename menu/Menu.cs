@@ -32,11 +32,15 @@ class Menu {
     public static void status(Vehicle[] lot) {
         int occupied = 0;
         int available = 0;
-        Console.WriteLine("|{0,4}|{1,16}|{2,16}|{3,16}|{4,24}|", "Lot", "Nomor Plat", "Warna", "Jenis", "Check-in");
+        int duration = 0;
+        int parkingFee = 0;
+        Console.WriteLine("|{0,4}|{1,16}|{2,16}|{3,16}|{4,24}|{5,16}|{6,16}|", "Lot", "Nomor Plat", "Warna", "Jenis", "Check-in", "Durasi Parkir", "Biaya");
         for (int i = 0; i < lot.Length; i++) {
             if (lot[i] != null) {
                 occupied++;
-                Console.WriteLine("|{0,4}|{1,16}|{2,16}|{3,16}|{4,24}|", i+1, lot[i].Number, lot[i].Color,  lot[i].Type, lot[i].DateTime);
+                duration = (int)(DateTime.Now - lot[i].DateTime).TotalSeconds / 10;
+                parkingFee = 2000 + (duration * 2000);
+                Console.WriteLine("|{0,4}|{1,16}|{2,16}|{3,16}|{4,24}|{5,16}|{6,16}|", i+1, lot[i].Number, lot[i].Color,  lot[i].Type, lot[i].DateTime, duration, parkingFee);
             } else {
                 available++;
             }
